@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{55FC4C8A-2622-4A07-A7AF-05629F7EE3BC}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RibbonUnk</RootNamespace>
+    <AssemblyName>RibbonUnk</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="00.ControlColor\FormRibbonColor.cs" />
+    <Compile Include="00.ControlColor\GroupBoxColor.cs" />
+    <Compile Include="00.ControlColor\HomeRibbonColor.cs" />
+    <Compile Include="00.ControlColor\MainMenuColor.cs" />
+    <Compile Include="00.ControlColor\MenuStripColor.cs" />
+    <Compile Include="00.ControlColor\PanelColor.cs" />
+    <Compile Include="00.ControlColor\PanelEffectColor.cs" />
+    <Compile Include="00.ControlColor\PanelMdiColor.cs" />
+    <Compile Include="00.ControlColor\RibbonColor.cs" />
+    <Compile Include="00.ControlColor\SeparatorColor.cs" />
+    <Compile Include="00.ControlColor\StatusStripColor.cs" />
+    <Compile Include="01.Conponentes\TextBoxRibbon.cs" />
+    <Compile Include="02.Controladores\Renderer\ToolStripRendererBlack.cs" />
+    <Compile Include="02.Controladores\Renderer\ToolStripRendererBlue.cs" />
+    <Compile Include="02.Controladores\Renderer\ToolStripRendererRibbon.cs" />
+    <Compile Include="02.Controladores\Renderer\ToolStripRendererSmile.cs" />
+    <Compile Include="02.Controladores\Renderer\ToolStripRendererUnknow.cs" />
+    <Compile Include="ColorTable.cs" />
+    <Compile Include="02.Controladores\RibbonDesigner.cs" />
+    <Compile Include="02.Controladores\RibbonGroupBoxDesigner.cs" />
+    <Compile Include="02.Controladores\RibbonMenuStripDesigner.cs" />
+    <Compile Include="02.Controladores\RibbonPanelDesigner.cs" />
+    <Compile Include="02.Controladores\RibbonPanelEffectDesigner.cs" />
+    <Compile Include="02.Controladores\RibbonPanelMdiDesigner.cs" />
+    <Compile Include="02.Controladores\RibbonSeparatorDesigner.cs" />
+    <Compile Include="02.Controladores\RibbonStatusStripDesigner.cs" />
+    <Compile Include="Enumeraciones\Enums.cs" />
+    <Compile Include="Forms\RibbonFormTheme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RibbonFormTheme.Designer.cs">
+      <DependentUpon>RibbonFormTheme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RibbonNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RibbonNotification.Designer.cs">
+      <DependentUpon>RibbonNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewThema.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewThema.Designer.cs">
+      <DependentUpon>ViewThema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IRibbonDesign.cs" />
+    <Compile Include="Interfaces\IToolStripRenderer.cs" />
+    <Compile Include="Memory.cs" />
+    <Compile Include="Otros\ColorsDrawing.cs" />
+    <Compile Include="Otros\Funciones.cs" />
+    <Compile Include="Otros\ImageBase64.cs" />
+    <Compile Include="Otros\RibbonClassMenu.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonManager.cs" />
+    <Compile Include="Temas\SkinBlack.cs" />
+    <Compile Include="Temas\SkinBlue.cs" />
+    <Compile Include="Temas\SkinSmile.cs" />
+    <Compile Include="Temas\SkinUnknown.cs" />
+    <Compile Include="01.Conponentes\HomeRibbon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="01.Conponentes\HomeRibbon.Designer.cs">
+      <DependentUpon>HomeRibbon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01.Conponentes\Ribbon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="01.Conponentes\RibbonGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="01.Conponentes\RibbonMainMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="01.Conponentes\RibbonMainMenu.Designer.cs">
+      <DependentUpon>RibbonMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01.Conponentes\RibbonMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="01.Conponentes\RibbonPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="01.Conponentes\RibbonPanelEffect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="01.Conponentes\RibbonPanelMdi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="01.Conponentes\RibbonSeparator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="01.Conponentes\RibbonStatusStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\RibbonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RibbonForm.Designer.cs">
+      <DependentUpon>RibbonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton_inicio_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="01.Conponentes\HomeRibbon.resx">
+      <DependentUpon>HomeRibbon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01.Conponentes\RibbonMainMenu.resx">
+      <DependentUpon>RibbonMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RibbonForm.resx">
+      <DependentUpon>RibbonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RibbonFormTheme.resx">
+      <DependentUpon>RibbonFormTheme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RibbonNotification.resx">
+      <DependentUpon>RibbonNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewThema.resx">
+      <DependentUpon>ViewThema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha_btn_inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controles\Controles.csproj">
+      <Project>{8F203720-53AD-4B4B-A674-547299A3C54D}</Project>
+      <Name>Controles</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
